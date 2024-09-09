@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "pinia": "https://cdn.jsdelivr.net/npm/pinia/dist/pinia.esm-browser.js",
+            "vue-demi": "https://cdn.jsdelivr.net/npm/vue-demi/lib/v3/index.mjs",
+            "@vue/devtools-api": "https://cdn.jsdelivr.net/npm/@vue/devtools-api/lib/esm/index.js",
+            "vue": "https://cdn.jsdelivr.net/npm/vue/dist/vue.esm-browser.prod.js"
+          }
+        }
+    </script>
+    <script type="module" src="app/app.js"></script>
+</head>
+
+<body>
+    <div id="loading">
+        Loading...
+    </div>
+
+    <div id="app" v-cloak>
+        <div>{{ title }}</div>
+        <div v-text="message"></div>
+        
+        <h3>Vue Component with Pinia</h3>
+
+        <component-view></component-view>
+        
+        <div class="container">
+            <component-reset class="item"></component-reset>
+            <component-minus class="item"></component-minus>
+            <component-plus class="item"></component-plus>
+            <component-triple class="item"></component-triple>
+        </div>
+    </div>
+</body>
+
+</html>
